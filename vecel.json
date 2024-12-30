@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "services/kitchen/main.go",
+        "use": "@vercel/go"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.+)",
+        "dest": "services/kitchen/main.go"
+      }
+    ]
+  }
