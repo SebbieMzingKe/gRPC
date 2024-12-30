@@ -4,12 +4,21 @@
       {
         "src": "services/kitchen/main.go",
         "use": "@vercel/go"
+      },
+      {
+        "src": "services/orders/main.go",
+        "use": "@vercel/go"
       }
     ],
     "routes": [
       {
-        "src": "/(.+)",
+        "src": "/kitchen",
         "dest": "services/kitchen/main.go"
+      },
+      {
+        "src": "/orders",
+        "dest": "services/orders/main.go"
       }
     ]
   }
+  
